@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FoodGuru</title>
+    <link rel="stylesheet" href="mainSTYLE.css">
+</head>
+<body>
+
+    <div class="title1"> FoodGuru</div>
+
+    <button class="favorites" onclick="favBarShow()" type="submit">
+            <img src="star-solid.svg">
+        </button>
+
+    <button class="nightMode" onclick="colorShow()" type="submit">
+        <img src="moon-solid.svg" > 
+        </button>
+
+    <div class="favWidget">
+        <button class="closeFav" onclick="favBarDis()" type="submit">
+            <img src="xmark-solid.svg">
+        </button>
+    </div>
+
+    <form class="searchForm" onsubmit="return false">
+        <input class="searchBar" type="text" placeholder="Search food"/>
+        <button class="go" onclick="barSearch()" type="submit">
+            Search
+        </button>
+    </form>
+
+    <div class="popUp" >
+        <div class="clickSearch" onclick="barSearch()" > 
+            <img class="arrow" src="arrow-up-solid.svg">
+        </div>
+    </div>
+
+    <div class="ingredientsCont">
+        
+        <div class="ingredientsAdd"> 
+            
+            <h1> Add ingredients</h1>
+            <form class="addFood" onsubmit="return false">
+                <input class="addBar" type="text" placeholder="Search ingredient"/>
+                <button class="goAdd" onclick="handleInput()" type="submit"> Go</button>
+            </form>
+        </div>
+
+        <div class="ingredientsNo">
+            <h1> Ignore ingredients</h1>
+            <form class="noFood" onsubmit="return false">
+                <input class="noBar" type="text" placeholder="Search ingredient"/>
+                <button class="noAdd" onclick="handleInputDel()" type="submit"> Go</button>
+            </form>
+        </div>
+
+    </div>
+
+    
+</body>
+
+
+<script type = "text/javascript" src="script.js"> </script>
+
+</html>

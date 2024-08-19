@@ -1,0 +1,292 @@
+body {
+    display: flex;
+    text-align: center;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #faf3e0; 
+}
+
+@media screen {
+    body {
+        display: flex;
+        background-color: #fffbf5; 
+        text-align: center;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+}
+
+.title1 {
+    font-size: 80px;
+    font-weight: bold;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    color: #8b5e34; 
+    text-align: center;
+    margin-top: 20px;
+    font-family: 'Georgia', 'Times New Roman', Times, serif;
+}
+
+.title1::before,
+.title1::after {
+    content: '';
+    display: block;
+    height: 2px;
+    width: 50%;
+    background: #8b5e34;
+    margin: 0 10px;
+}
+
+.favorites {
+    height: 40px;
+    width: 40px;
+    background-color: #b08968; 
+    position: fixed;
+    left: 5px;
+    bottom: 910px;
+    border: 0px;
+}
+
+.nightMode {
+    height: 40px;
+    width: 40px;
+    background-color: #b08968; 
+    position: fixed;
+    right: 5px;
+    bottom: 910px;
+    border: 0px;
+}
+
+.favWidget {
+    width: 45%;
+    height: 100%;
+    background-color: #4b2e1a; 
+    position: fixed;
+    left: -45%;
+    bottom: 0;
+}
+
+.closeFav {
+    height: 40px;
+    width: 40px;
+    background-color: #4b2e1a;
+    position: relative;
+    left: 45%;
+    border: 0px;
+}
+
+.searchForm {
+    width: 100%;
+}
+
+.searchBar {
+    width: 95%;
+    height: 40px;
+    background-color: #fff3e6; 
+    border: 2px solid #8b5e34; 
+    border-radius: 8px; 
+    padding: 5px 10px; 
+    font-size: 16px;
+    color: #4b2e1a; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+}
+
+.go {
+    height: 40px;
+    background-color: #b08968;
+    border-radius: 8px;
+    color: #fff;
+    font-size: 16px;
+    padding: 0 20px;
+    cursor: pointer;
+    border: none;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.ingredientsCont {
+    width: 95%;
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    margin-bottom: 1%;
+}
+
+.ingredientsAdd {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    border-right: 2px solid #8b5e34;
+}
+
+.ingredientsNo {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    border-left: 2px solid #8b5e34;
+}
+
+.addBar, .noBar {
+    background-color: #b08968;
+    width: 85%;
+    border: 0px;
+    border-radius: 8px;
+    padding: 8px;
+    color: #fff;
+    font-size: 16px;
+}
+
+.goAdd, .noAdd {
+    height: 28px;
+    width: 36px;
+    position: relative;
+    background-color: #b08968;
+    border-radius: 4px;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+.popUp {
+    width: 100%;
+    height: 85%;
+    background-color: #8b5e34;
+    position: fixed;
+    bottom: -82.1%;
+    z-index: 1;
+    /* transform: translateY(1200px); /* moves the result bar out of the way */
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.clickSearch {
+    background-color: #b08968;
+    width: 100%;
+    height: 3%;
+    border: 1px solid #8b5e34;
+    border-radius: 8px;
+}
+
+.arrow {
+    width: 80%;
+    height: 100%;
+    margin: 0 auto;
+    display: block;
+    background-color: #fff;
+    border-radius: 50%;
+}
+
+
+.smallCont {
+    display: flex;
+    width: 100%;
+    height: auto;
+    justify-content:space-evenly;
+    align-items: center;
+}
+
+.ingrText {
+    margin-right: auto;
+    margin-left: auto;
+
+}
+
+.delButton {
+    height: 70%;
+    width: auto;
+    border: 1px solid black;
+
+}
+
+.smallContAdd {
+    display: flex;
+    width: 100%;
+    height: auto;
+    justify-content:space-evenly;
+    align-items: center;
+}
+
+.textAdd{
+    margin-right: auto;
+    margin-left: auto;
+
+}
+
+.delButtonAdd {
+    height: 70%;
+    width: auto;
+    border: 1px solid black;
+
+}
+
+
+
+body.dark-mode {
+    background-color: #2b2b2b; 
+    color: #e0e0e0; 
+}
+
+body.dark-mode .title1 {
+    color: #f5f5f5; 
+}
+
+body.dark-mode .title1::before,
+body.dark-mode .title1::after {
+    background: #f5f5f5;
+}
+
+body.dark-mode .favorites {
+    background-color: #444444; 
+}
+
+body.dark-mode .favWidget {
+    background-color: #333333; 
+}
+
+body.dark-mode .closeFav {
+    background-color: #333333;
+}
+
+body.dark-mode .searchBar {
+    background-color: #444444; 
+    border: 2px solid #888888; 
+    color: #f5f5f5; 
+}
+
+body.dark-mode .go {
+    background-color: #666666; 
+    color: #f5f5f5;
+}
+
+body.dark-mode .addBar, 
+body.dark-mode .noBar {
+    background-color: #555555; 
+    color: #f5f5f5;
+}
+
+body.dark-mode .goAdd, 
+body.dark-mode .noAdd {
+    background-color: #555555;
+}
+
+body.dark-mode .popUp {
+    background-color: #444444;
+}
+
+body.dark-mode .clickSearch {
+    background-color: #666666;
+}
+
+body.dark-mode .arrow {
+    background-color: #888888; 
+}
+
+body.dark-mode .nightMode {
+    background-color: #444444; 
+}
+
+
