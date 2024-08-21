@@ -1,5 +1,5 @@
-var ingredientsArrayAdd = [{text: '', id: 0}];
-var ingredientsArrayDel = [];
+var ingredientsArrayAdd = [{text: ' ', id: 0}];
+var ingredientsArrayDel = [{text: ' ', id: 0}];
 var currId = 1;
 
 var popUpFav = document.getElementsByClassName('favWidget')[0];
@@ -15,7 +15,6 @@ var moon = document.getElementsByClassName('moon')[0];
 
 function handleInput() {
     var input = document.getElementsByClassName('addBar')[0].value;
-    //console.log(input);
     var textTest = false;
 
     ingredientsArrayAdd.forEach( (item) => {
@@ -43,21 +42,6 @@ function handleInput() {
     smallContAdd.appendChild(delBtn);
 
 
-
-   /* var newIng = document.createElement('P');
-
-    newIng.textContent=input;
-    newIng.setAttribute('id', String(currId));
-
-    //newIng.setAttribute('onclick', 'delElem(' + String(currId) + ')')
-
-    var delButton = document.createElement('Button');
-    delButton.setAttribute('onclick', 'delElem(' + String(currId) + ')')
-    delButton.setAttribute('class', "delButton");
-
-    newIng.appendChild(delButton);
-*/
-
     var cont = document.getElementsByClassName('ingredientsAdd')[0];
     cont.appendChild(smallContAdd);
 
@@ -71,7 +55,6 @@ function handleInput() {
 
 function handleInputDel() {
     var inputDel = document.getElementsByClassName('noBar')[0].value;
-    //console.log(inputDel);
     var textTest = false;
 
 
@@ -90,7 +73,6 @@ function handleInputDel() {
 
     var newIngD = document.createElement('P');
     newIngD.textContent=inputDel;
-    //newIngD.setAttribute('id', String(currId));
     newIngD.setAttribute('class', 'ingrText');
     smallCont.appendChild(newIngD);
 
@@ -132,9 +114,6 @@ function barSearchDown() {
 function colorShow() {
 
     document.body.classList.toggle('dark-mode');
-
-    //clickMoon.setAttribute("onclick", "colorShow()")
-    //moon.setAttribute("src", "sun-solid.svg");
 
     const img = document.querySelector('.nightMode img');
 
